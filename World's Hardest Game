@@ -1,0 +1,27 @@
+// I could make this 999999x better but this game? really?
+
+// !!IMPORTANT!!  MAKE SURE YOUR CONSOLE IS ON "html5game (play)" AND NOT "Top"   !!IMPORTANT!!!
+
+let currentLevel = 0; //SET THIS TO YOUR CURRENT LEVEL
+
+
+playerHitEnemy = function(){}
+
+let currentX = player.x;
+let currentY = player.y;
+
+for (let i = 0; i < coins[currentLevel].length; i++) {
+  setTimeout(function() {
+    player.x = coins[currentLevel][i].x;
+    player.y = coins[currentLevel][i].y;
+    console.log(`Coin ${i + 1}: x=${player.x}, y=${player.y}`);
+    if (i === coins[currentLevel].length) {
+      console.log("Loop finished");
+      player.x = currentX;
+      player.y = currentY;
+      /*setInterval(function() {
+        player.x += 10;
+      }, 100)*/
+    }
+  }, i * 100);
+}
