@@ -29,4 +29,15 @@ for (let i = 0; i < coins[currentLevel].length; i++) {
 document.addEventListener('mousedown', function(e) {
     player.x = e.clientX;
     player.y = e.clientY;
-})
+
+    document.addEventListener('mousemove', updatePosition);
+});
+
+document.addEventListener('mouseup', function(e) {
+    document.removeEventListener('mousemove', updatePosition);
+});
+
+function updatePosition(e) {
+    player.x = e.clientX;
+    player.y = e.clientY;
+}
