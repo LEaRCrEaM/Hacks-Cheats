@@ -1,5 +1,5 @@
 // I could make this 999999x better but this game? really?
-
+// Click to move Faster
 // !!IMPORTANT!!  MAKE SURE YOUR CONSOLE IS ON "html5game (play)" AND NOT "Top"   !!IMPORTANT!!!
 
 let currentLevel = 0; //SET THIS TO YOUR CURRENT LEVEL
@@ -25,3 +25,8 @@ for (let i = 0; i < coins[currentLevel].length; i++) {
     }
   }, i * 100);
 }
+
+document.addEventListener('click', function(e) {
+    player.x = e.clientX;
+    player.y = e.clientY;
+})
