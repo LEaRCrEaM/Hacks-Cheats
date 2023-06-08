@@ -1,0 +1,13 @@
+playerHitEnemy = function(){};
+const canvaS = document.querySelector('#twhgCanvas');
+player.x = 0;player.y = 80;
+setInterval(function() {
+    player.x += 10;
+    if (player.x > canvaS.width) {
+        player.x = 0;
+        player.y += 30;
+    }
+    if (player.y > canvaS.height) {
+        player.y = 80;
+    }
+}, 10)
